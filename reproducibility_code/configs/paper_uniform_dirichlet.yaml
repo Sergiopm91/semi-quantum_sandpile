@@ -1,0 +1,23 @@
+lattice:
+  size: 100
+  initial_height: 3.0
+  threshold: 4.0
+  boundary: open
+simulation:
+  steps: 1100000
+  burn_in: 100000
+  seed: 20260905
+  engine: numba
+  epsilon: 1.0e-12
+  redistribution: dirichlet
+  redistribution_seed: 20260907
+drive:
+  mode: uniform_p
+  p_low: 0.0
+  p_high: 1.0
+output:
+  directory: results/paper_uniform_dirichlet
+  save_csv: true
+  save_npz: true
+  save_lattice: true
+  make_plots: true

@@ -1,0 +1,22 @@
+lattice:
+  size: 100
+  initial_height: 3.0
+  threshold: 4.0
+  boundary: open
+simulation:
+  steps: 1100000
+  burn_in: 100000
+  seed: 20260905
+  engine: numba
+  epsilon: 1.0e-12
+  redistribution: discrete
+  redistribution_seed: 20260906
+drive:
+  mode: bernoulli_p
+  bernoulli_prob: 0.5
+output:
+  directory: results/paper_bernoulli_fixed
+  save_csv: true
+  save_npz: true
+  save_lattice: true
+  make_plots: true

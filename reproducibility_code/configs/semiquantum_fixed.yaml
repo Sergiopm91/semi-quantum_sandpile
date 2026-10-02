@@ -1,0 +1,24 @@
+lattice:
+  size: 100
+  initial_height: 3.0
+  threshold: 4.0
+  boundary: open
+
+simulation:
+  steps: 1000000
+  burn_in: 0
+  seed: 20260905
+  engine: numba
+  epsilon: 1.0e-12
+
+drive:
+  # Every incoming grain-wave has |beta|=0.8, hence p=|beta|^2=0.64.
+  mode: fixed_beta
+  beta_abs: 0.8
+
+output:
+  directory: results/semiquantum_beta08_100x100_1M
+  save_csv: true
+  save_npz: true
+  save_lattice: true
+  make_plots: true

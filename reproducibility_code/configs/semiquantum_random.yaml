@@ -1,0 +1,27 @@
+lattice:
+  size: 100
+  initial_height: 3.0
+  threshold: 4.0
+  boundary: open
+
+simulation:
+  steps: 1000000
+  burn_in: 0
+  seed: 20260905
+  engine: numba
+  epsilon: 1.0e-12
+
+drive:
+  # Paper-compatible family: p=|beta|^2 is sampled directly.
+  # The manuscript does not specify a distribution, so this is an explicit
+  # experimental choice rather than a claim about the original model.
+  mode: beta_p
+  beta_a: 2.0
+  beta_b: 2.0
+
+output:
+  directory: results/semiquantum_random_100x100_1M
+  save_csv: true
+  save_npz: true
+  save_lattice: true
+  make_plots: true
